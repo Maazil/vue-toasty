@@ -5,18 +5,18 @@
       "module": "ESNext",
       "lib": ["ES2020", "DOM", "DOM.Iterable"],
       "skipLibCheck": true,
-      "moduleResolution": "bundler",
-      "allowImportingTsExtensions": true,
+      "moduleResolution": "node",
+      // "allowImportingTsExtensions": true,
       "resolveJsonModule": true,
       "isolatedModules": true,
-    //   "noEmit": true, // Disable emitting files, as Vite handles this
+        //   "noEmit": true, // Disable emitting files, as Vite handles this
+        "jsx": "preserve",
+        "outDir": "dist",
+        "declaration": true,
       "strict": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
       "noFallthroughCasesInSwitch": true,
-      "jsx": "preserve",
-      "declaration": true,
-      "outDir": "dist"
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
     "references": [{ "path": "./tsconfig.node.json" }]

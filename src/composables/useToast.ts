@@ -1,6 +1,6 @@
-import { ref, markRaw, createApp, h } from 'vue';
+import { markRaw, createApp, h } from 'vue';
 import ToastContainer from '../components/ToastContainer.vue';
-import type { Toast, ToastOptions, ToastPosition } from '../types';
+import type { ToastOptions, ToastPosition } from '../types';
 
 interface ToastApi {
   success: (message: string, options?: ToastOptions) => number;

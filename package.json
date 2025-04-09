@@ -1,9 +1,9 @@
 {
-  "name": "vue-toasty",
+  "name": "vue-toasty-notif",
   "version": "0.1.0",
   "description": "A lightweight, customizable toast notification system for Vue 3 with TypeScript support",
-  "main": "dist/vue-toasty.umd.js",
-  "module": "dist/vue-toasty.es.js",
+  "main": "dist/vue-toasty-notif.umd.js",
+  "module": "dist/vue-toasty-notif.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -11,7 +11,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:demo": "vite --config vite.config.ts --mode demo ./examples",
+    "build:demo": "vite build --config vite.config.ts --mode demo ./examples",
+    "deploy:demo": "npm run build:demo && gh-pages -d demo-dist"
   },
   "author": {
     "name": "Matthew Ling",
@@ -32,7 +35,8 @@
   "devDependencies": {
     "@types/node": "^18.14.0",
     "@vitejs/plugin-vue": "^4.0.0",
-    "typescript": "^5.0.0",
+    "gh-pages": "^5.0.0",
+    "typescript": "^4.9.5",
     "vite": "^4.2.0",
     "vite-plugin-dts": "^2.1.0",
     "vue": "^3.5.13",

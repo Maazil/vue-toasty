@@ -45,7 +45,7 @@ const handleClose = () => {
       @click="handleClose"
       aria-label="Close toast"
     >
-      x
+    ✖
     </button>
   </div>
 </template>
