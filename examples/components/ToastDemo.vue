@@ -15,34 +15,27 @@ const selectedPosition = ref<ToastPosition>('top-right');
 const message = ref('This is a notification message!');
 const duration = ref(3000);
 
-const toast = useToast(selectedPosition.value);
+const toast = ref(useToast(selectedPosition.value));
 
-// Update toast position when selection changes
 const updatePosition = () => {
-  // Re-create the toast instance with new position
-  // In a real app this would be managed better
-  const newToast = useToast(selectedPosition.value);
-  toast.success = newToast.success;
-  toast.error = newToast.error;
-  toast.info = newToast.info;
-  toast.warning = newToast.warning;
-  toast.remove = newToast.remove;
+  // Re-create the toast instance with the new position
+  toast.value = useToast(selectedPosition.value);
 };
 
 const showSuccessToast = () => {
-  toast.success(message.value, { duration: duration.value });
+  toast.value.success(message.value, { duration: duration.value });
 };
 
 const showErrorToast = () => {
-  toast.error(message.value, { duration: duration.value });
+  toast.value.error(message.value, { duration: duration.value });
 };
 
 const showInfoToast = () => {
-  toast.info(message.value, { duration: duration.value });
+  toast.value.info(message.value, { duration: duration.value });
 };
 
 const showWarningToast = () => {
-  toast.warning(message.value, { duration: duration.value });
+  toast.value.warning(message.value, { duration: duration.value });
 };
 </script>
 
