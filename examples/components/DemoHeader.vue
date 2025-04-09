@@ -4,7 +4,7 @@
 
 <template>
   <header>
-    <h1>Vue Toasty</h1>
+    <h1>Vue Toasty Notif</h1>
     <p class="tagline">
       A lightweight, customizable toast notification system for Vue 3 applications
     </p>
