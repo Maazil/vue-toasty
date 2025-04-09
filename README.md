@@ -1,13 +1,13 @@
-# Vue Simple Toasts
+# Vue Toasty
 
 A lightweight, customizable toast notification system for Vue 3 applications with TypeScript support.
 
 ## Installation
 
 ```bash
-npm install vue-simple-toasts
+npm install vue-toasty
 # or
-yarn add vue-simple-toasts
+yarn add vue-toasty
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ Import and use the `useToast` composable in your Vue components:
 
 ```vue
 <script setup lang="ts">
-import { useToast } from 'vue-simple-toasts';
+import { useToast } from 'vue-toasty';
 
 // Create a toast instance
 const toast = useToast('top-right');
@@ -62,7 +62,7 @@ Options:
 This package includes TypeScript definitions:
 
 ```typescript
-import { ToastOptions, ToastPosition } from 'vue-simple-toasts';
+import { ToastOptions, ToastPosition } from 'vue-toasty';
 
 // Example using types
 const customOptions: ToastOptions = {
